@@ -28,7 +28,4 @@ function animate()
   }
 }
 
-
-
-
 animate();
