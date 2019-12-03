@@ -10,7 +10,7 @@ canvas.height = height;
 let points = [];
 
 for (var i = 0; i < 15; i++) {
-  points[i] = new DPoint(new Vector2d(GetRandom(400,50),GetRandom(400,50)), new Vector2d(GetRandom(8,2),GetRandom(4,3)), new Vector2d(0,0),20, "purple");
+  points[i] = new DPoint(new Vector2d(GetRandom(400,50),GetRandom(400,50)), new Vector2d(GetRandom(8,2),GetRandom(4,3)), new Vector2d(0,0),GetRandom(25,5), "purple");
 }
 
 function animate()
