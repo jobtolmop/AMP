@@ -11,6 +11,7 @@ let toB = true;
 
 let A = new Point(new Vector2d(200,300),20,255,0,0,true)
 let B = new Point(new Vector2d(500,400),20,255,0,0,true)
+let C = new Point(new Vector2d(700,500),20,255,0,0,true)
 
 let point = new DPoint(new Vector2d(200,300),new Vector2d(0,0),new Vector2d(0,0),10,"white");
 
@@ -23,11 +24,13 @@ function animate(){
   context.beginPath();
   context.moveTo(A.position.dx,A.position.dy);
   context.lineTo(B.position.dx,B.position.dy);
+  context.lineTo(C.position.dx,C.position.dy);
   context.closePath();
   context.stroke();
 
   A.draw(context);
   B.draw(context);
+  C.draw(context);
 
   point.draw(context);
 
@@ -43,9 +46,15 @@ function animate(){
       point.vel.differenceVector(A.position,point.pos);
       if (point.vel.magnitude < 0.1)
       {
-        currTarget = 0;
+        currTarget = 2;
       }
         break;
+        case 2:
+        point.vel.differenceVector(C.position,point.pos);
+        if (point.vel.magnitude < 0.1)
+        {
+          currTarget = 0;
+        }
     default:
 
   }
